@@ -14,10 +14,8 @@ async def generate(num: int):
     """Generate a random password of length num"""
     if num < 3:
         num = 3
-        pass
     if num > 50:
         num = 50
-        pass
     password = ""
     count = num // 3
     remainder = num % 3
@@ -26,11 +24,9 @@ async def generate(num: int):
     password += random.choice(string.ascii_uppercase)
     for i in range(len_let):
         password += random.choice(string.ascii_letters)
-        pass
     for i in range(count):
         password += random.choice(characters)
         password += random.choice(string.digits)
-        pass
     password = ''.join(random.sample(password, len(password)))
     return {"password": password}
 
