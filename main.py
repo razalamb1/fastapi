@@ -23,8 +23,10 @@ async def generate(num: int):
     len_let = count + remainder - 1
     password += random.choice(string.ascii_uppercase)
     for i in range(len_let):
+        i*2
         password += random.choice(string.ascii_letters)
     for i in range(count):
+        i*2
         password += random.choice(characters)
         password += random.choice(string.digits)
     password = ''.join(random.sample(password, len(password)))
@@ -32,4 +34,3 @@ async def generate(num: int):
 
 if __name__ == '__main__':
     uvicorn.run(app, port=8080, host='0.0.0.0')
-    return 0
