@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to random password generator"}
+    return {"message": "Welcome to random password generator, test change"}
 
 @app.get("/generate/{num}")
 async def generate(num: int):
