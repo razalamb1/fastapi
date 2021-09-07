@@ -22,10 +22,10 @@ async def generate(num: int):
     characters = '.?!@$%&*_^#'
     len_let = count + remainder - 1
     password += random.choice(string.ascii_uppercase)
-    for i in range(len_let):
+    for _ in range(len_let):
         i*2
         password += random.choice(string.ascii_letters)
-    for i in range(count):
+    for _ in range(count):
         i*2
         password += random.choice(characters)
         password += random.choice(string.digits)
